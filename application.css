@@ -1,0 +1,112 @@
+body, html, nav, ul, li, main, section, footer, h1, p, a {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font: inherit;
+  background: inherit;
+  -webkit-appearance: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.group:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.header-nav {
+  width: 100%;
+  background: red;
+}
+
+.header-nav-wrap {
+  width: 1000px;
+  border: 2px solid orange;
+  margin: 0 auto;
+}
+
+.header-list {
+  border: 2px solid yellow;
+  width: 800px;
+  margin: 0 auto;
+}
+
+.header-list > li {
+  border: 5px solid blue;
+
+  width: 150px;
+  padding: 10px 20px;
+  float: left;
+}
+
+.header-list a {
+
+}
+
+.content {
+  margin: 0 auto;
+}
+
+.content-wrap {
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+  border: 2px solid purple;
+  /*overflow: hidden;*/
+}
+
+ul.content-list {
+  width: 400%;
+  transition: transform 2s;
+}
+
+.content-list > li {
+  float: left;
+  background: grey;
+  width: 25%;
+}
+
+.content-body {
+  padding: 80px 150px;
+}
+
+.link-home {
+  transform: translateX(0%);
+}
+
+.link-projects {
+  transform: translateX(-25%);
+}
+
+.link-about {
+  transform: translateX(-50%);
+}
+
+.link-contact {
+  transform: translateX(-75%);
+}
+
+.footer-nav {
+  background: purple;
+}
+
+.footer-nav-wrap {
+  background: red;
+  border: 2px solid yellow;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-nav-list {
+  width: 500px;
+  margin: 0 auto;
+  border: 2px solid orange;
+}
+
+.footer-nav-list li {
+  float: left;
+  padding: 10px 20px;
+}
