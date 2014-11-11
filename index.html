@@ -3,19 +3,22 @@
   <head>
     <title></title>
     <link rel="stylesheet" href="application.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
     <script src="jquery-1.11.1.min.js"></script>
   </head>
+
   <body>
     <nav class="header-nav">
       <div class="header-nav-wrap">
         <ul class="header-list group">
-          <li><a data-link="link-home" href="#home">Home</a></li>
-          <li><a data-link="link-projects" href="#projects">Portfolio</a></li>
-          <li><a data-link="link-about" href="#about">About Me</a></li>
-          <li><a data-link="link-contact" href="#contact">Contact</a></li>
+          <li><a data-link="link-home" href="#home">HOME</a></li>
+          <li><a data-link="link-project" href="#project">PORTFOLIO</a></li>
+          <li><a data-link="link-about" href="#about">ABOUT ME</a></li>
+          <li><a data-link="link-contact" href="#contact">CONTACT</a></li>
         </ul>
       </div>
     </nav>
+
     <main>
       <section class="content">
         <div class="content-wrap">
@@ -34,14 +37,12 @@
             <li>
               <section id="projects" class="content-body portfolio">
                 <h1>Projects</h1>
-                <!-- <ul>
-                  <li>Doggystyle</li>
-                  <li>Blackjack</li>
-                  <li>Asteroids</li>
-                  <li>ActiveRecordLite</li>
-                  <li>RailsLite</li>
-                  <li>Something Else</li>
-                </ul> -->
+                  <h3>Hi, Here are my projects...</h3>
+                  <p>
+                    I'm a software developer constantly trying to enhance and expand my skillset. My passions are to design, develop, and innovate with code.
+                    I've worked as a mechanical and electronics systems engineer for several years in the robotics and medical device industries while
+                    coding on the side. 4 years after graduating college I decided to develop software full time. Click above to check out some of my latest projects
+                  </p>
               </section>
             </li>
             <li>
@@ -49,37 +50,55 @@
                 <h1>About Me</h1>
                 <h3>Hi, I'm David...</h3>
                 <p>
-                  I'm a growing software developer constantly trying to enhance and expand my skillset. My passions are to design, develop, and innovate with code.
-                  I've worked as a mechanical and electronics systems engineer for several years in the robotics and medical device industries while
-                  coding on the side. 4 years after graduating college I decided to develop software full time. Check out some of my latest projects below!
+                  Here's some stuff about me
                 </p>
               </section>
             </li>
             <li>
               <section class="content-body contact">
                 <h1>Contact</h1>
+                <h3>Here's my Contact</h3>
+                <p>Email, Phone, Git</p>
               </section>
             </li>
           </ul>
         </div>
       </section>
     </main>
+
     <footer>
       <nav class="footer-nav">
         <div class="footer-nav-wrap">
           <ul class="footer-nav-list group">
-            <li>LinkedIn</li>
-            <li>Github</li>
-            <li>Tumblr</li>
-            <li>Email</li>
+            <li>
+              <a class="footer-link linked-in">
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a class="footer-link github">
+                Github
+              </a>
+            </li>
+            <li>
+              <a class="footer-link tumblr">
+                Tumblr
+              </a>
+            </li>
+            <li>
+              <a class="footer-link email">
+                Email
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
     </footer>
 
+
     <script>
       var changeView = function(to) {
-        $('.content-list').removeClass('link-home link-projects link-about link-contact');
+        $('.content-list').removeClass('link-home link-project link-about link-contact');
         $('.content-list').addClass(to);
       };
 
