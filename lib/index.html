@@ -41,7 +41,7 @@
               <section id="projects" class="content-body portfolio">
                 <h1>Projects</h1>
                 <div class="projects-container group">
-                  <a class="project-link">
+                  <a class="project-link" data-project="doggystyle">
                     <video class="project-preview" preload loop>
                       <source src="assets/videos/doggystyle.mov">
                     </video>
@@ -50,7 +50,7 @@
                       <p>Node | Backbone.JS | Ruby</p>
                     </div>
                   </a>
-                  <a class="project-link">
+                  <a class="project-link" data-project="asteroids">
                     <video class="project-preview" preload loop>
                       <source src="assets/videos/asteroids.mov">
                     </video>
@@ -59,7 +59,7 @@
                       <p>Node | Backbone.JS | Ruby</p>
                     </div>
                   </a>
-                  <a class="project-link">
+                  <a class="project-link" data-project="asteroids">
                     <figure class="project-preview">
                       <img src="">
                     </figure>
@@ -133,26 +133,41 @@
     <section id="doggystyle" class="modal">
       <section class="modal-content doggystyle">
         <ul class="modal-content-list group">
-          <li class="group">
+          <li id="page1" class="group">
             <div class="modal-page-description">
-              crap
+              <h4>Description</h4>
+              <p>technologies used</p>
             </div>
-            <figure class="modal-page-photo">
-              <img src="">
-            </figure>
+            <div class="modal-page-photo-container">
+              <figure class="modal-page-photo">
+                <img src="assets/images/doggystyle.png">
+              </figure>
+            </div>
           </li>
-          <li>
+          <li id="page2" class="group">
             <div class="modal-page-description">
               crap
             </div>
-            <figure class="modal-page-photo">
-              <img src="">
-            </figure>
+            <div class="modal-page-photo-container">
+              <figure class="modal-page-photo">
+                <img src="">
+              </figure>
+            </div>
+          </li>
+          <li id="page3" class="group">
+            <div class="modal-page-description">
+              crap
+            </div>
+            <div class="modal-page-photo-container">
+              <figure class="modal-page-photo">
+                <img src="">
+              </figure>
+            </div>
           </li>
         </ul>
         <div class="hide-modal">&times</div>
-        <div class="navigate-modal previous">&lt</div>
-        <div class="navigate-modal next">&gt</div>
+        <div class="navigate-modal previous" data-previous="">&lt</div>
+        <div class="navigate-modal next" data-next="">&gt</div>
       </section>
     </section>
 
@@ -163,15 +178,21 @@
             <div class="modal-page-description">
               crap
             </div>
-            <figure class="modal-page-photo">
-              <img src="">
-            </figure>
+            <div class="modal-page-photo-container">
+              <figure class="modal-page-photo">
+                <img src="">
+              </figure>
+            </div>
           </li>
           <li>crap2</li>
         </ul>
         <div class="hide-modal">&times</div>
-        <div class="navigate-modal previous">&lt</div>
-        <div class="navigate-modal next">&gt</div>
+        <div class="navigate-modal previous"
+             data-totalPages=""
+             data-navigatePage="">&lt</div>
+        <div class="navigate-modal next"
+             data-totalPages=""
+             data-navigatePage="">&gt</div>
       </section>
     </section>
 
@@ -192,7 +213,6 @@
         event.preventDefault();
         var vid = $(event.currentTarget).find('video');
         vid[0].play();
-
       });
 
       $('.project-link').on("mouseleave", function(event) {
@@ -202,11 +222,22 @@
       });
 
       $('.project-link').on("click", function(event) {
-        $('.modal').addClass('active');
+        var project = event.currentTarget.dataset.project;
+        var modal = $('#'+project);
+        var numPages = modal.find('li').length;
+
+        modal.addClass('active');
+        modal.find('.navigate-modal').attr('data-totalPages', numPages);
+        modal.find('.next').attr('data-navigateTo', '2');
+        modal.find('.previous').attr('data-navigateTo', numPages);
       });
 
       $('.hide-modal').on("click", function(event) {
         $('.modal').removeClass('active');
+      });
+
+      $('.next').on("click", function(event) {
+        debugger
       });
     </script>
 
