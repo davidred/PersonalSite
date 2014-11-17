@@ -1,0 +1,324 @@
+body, html, nav, ul, li, main, section, footer, h1, h2, h3, h4, p, a, div, figure, img {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font: inherit;
+  background: inherit;
+  -webkit-appearance: none;
+}
+
+body, html {
+  height: 100%;
+  position: relative;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+/*  height: 100%;*/
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  link-style: none;
+  text-decoration: none;
+}
+
+.group:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.header-nav {
+  font-family: 'Signika', sans-serif;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100%;
+}
+
+.header-nav-wrap {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.header-list {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.header-list > li {
+  width: 25%;
+  height: 100%;
+  text-align: center;
+  float: left;
+}
+
+.header-list a {
+  border-bottom: 2px solid rgb(232, 232, 232);
+  display: block;
+  padding: 20px 0;
+  margin: 0 10px;
+}
+
+.header-list a:hover {
+  border-bottom: 5px solid rgb(232, 232, 232);
+}
+
+.content {
+}
+
+.content-wrap {
+  position: relative;
+  width: 100%;
+/*  height: 100%;*/
+  overflow: hidden;
+
+}
+
+ul.content-list {
+  width: 400%;
+/*  height: 100%;*/
+  transition: transform 1s;
+  transition-timing-function: ease-in;
+}
+
+
+.content-list > li {
+  float: left;
+  width: 25%;
+/*  height: 100%;*/
+  box-sizing: border-box;
+  /*padding: 150px 200px 50px;*/
+}
+
+.content-body {
+  padding: 10% 10%;
+  margin: auto;
+  /*height: 600px;*/
+  min-height: 200px;
+}
+
+.home-summary {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-summary > h1 {
+  font-size: 40px;
+}
+
+.home-summary > h2 {
+  font-size: 30px;
+}
+
+
+.homepage-picture {
+  margin: 30px auto;
+  height: 300px;
+  width: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.homepage-picture > img {
+  width: 100%;
+  height: auto;
+}
+
+.projects-container {
+  /*border: 1px solid blue;*/
+  text-align: center;
+  margin: 0 auto;
+  width: 825px;
+
+}
+
+.project-link {
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  margin: 5px 5px;
+  cursor: pointer;
+  height: 300px;
+  border: 5px solid black;
+}
+
+.project-link:hover {
+  /*background: rgba(0,0,0,0.3);*/
+  border: 5px solid blue;
+}
+
+.project-preview {
+  /*float: left;*/
+  background: black;
+  overflow: hidden;
+  width: 350px;
+  height: 220px;
+  /*margin: 10px 10px;*/
+}
+
+.project-preview > img {
+  width: 100%;
+  height: 100%;
+}
+
+.project-preview > src {
+  width: auto;
+  height: 100%;
+}
+
+.link-home {
+  transform: translateX(0%);
+}
+
+.link-project {
+  transform: translateX(-25%);
+}
+
+.link-about {
+  transform: translateX(-50%);
+}
+
+.link-contact {
+  transform: translateX(-75%);
+}
+
+.footer-nav {
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+}
+
+.footer-nav-wrap {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.footer-nav-list {
+  width: 50%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.footer-nav-list li {
+  width: 25%;
+  height: 100%;
+  float: left;
+  text-align: center;
+}
+
+.footer-link {
+  display: block;
+  height: 100%;
+  padding: 20px 0;
+}
+
+.modal {
+  /*display: none;*/
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.75);
+}
+
+.modal-content {
+  position: absolute;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  height: 90%;
+  width: 90%;
+  border-radius: 3px;
+  background: white;
+  overflow: hidden;
+}
+
+.hide-modal {
+  position: absolute;
+  display: block;
+  top: 5px;
+  right: 25px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #ccc;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.hide-modal:hover {
+  color: black;
+}
+
+.navigate-modal {
+  display: block;
+  background: #ccc;
+  padding: 0 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Sigmar One';
+  cursor: pointer;
+  color: #fff;
+}
+
+.navigate-modal:hover {
+  background: black;
+}
+
+.next {
+  right: 10px;
+}
+
+.previous {
+  left: 10px;
+}
+
+.active {
+  display: block;
+}
+
+.modal-content-list {
+  height: 100%;
+  width: 400%;
+
+}
+
+.modal-content-list > li {
+  box-sizing: border-box;
+  float: left;
+  border: 2px solid blue;
+  width: 25%;
+  height: 100%;
+  padding: 0.5% 0.5%;
+}
+
+.modal-page-description {
+  float: left;
+  height: 100%;
+  width: 25%;
+  background: red;
+}
+
+.modal-page-photo {
+  float: left;
+  height: 100%;
+  width: 75%;
+  background: blue;
+}

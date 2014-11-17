@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>David Rozenberg</title>
+    <link rel="stylesheet" href="application.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Signika' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Sigmar+One' rel='stylesheet' type='text/css'>
+    <script src="jquery-1.11.1.min.js"></script>
+  </head>
+
+  <body>
+    <nav class="header-nav">
+      <div class="header-nav-wrap">
+        <ul class="header-list group">
+          <li><a data-link="link-home" href="#home">HOME</a></li>
+          <li><a data-link="link-project" href="#project">PORTFOLIO</a></li>
+          <li><a data-link="link-about" href="#about">ABOUT</a></li>
+          <li><a data-link="link-contact" href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <section class="content">
+        <div class="content-wrap">
+          <ul class="content-list group">
+            <li>
+              <section id="home" class="content-body home">
+                <div class="home-summary">
+                  <h1>David Rozenberg<h1>
+                  <figure class="homepage-picture">
+                    <img src='assets/images/david-rozenberg.jpg'>
+                  </figure>
+                  <h2>Software Developer</h2>
+                </div>
+
+              </section>
+            </li>
+            <li>
+              <section id="projects" class="content-body portfolio">
+                <h1>Projects</h1>
+                <div class="projects-container group">
+                  <a class="project-link">
+                    <video class="project-preview" preload loop>
+                      <source src="assets/videos/doggystyle.mov">
+                    </video>
+                    <div class="project-description">
+                      <h4>Doggystyle</h4>
+                      <p>Node | Backbone.JS | Ruby</p>
+                    </div>
+                  </a>
+                  <a class="project-link">
+                    <video class="project-preview" preload loop>
+                      <source src="assets/videos/asteroids.mov">
+                    </video>
+                    <div class="project-description">
+                      <h4>Asteroids</h4>
+                      <p>Node | Backbone.JS | Ruby</p>
+                    </div>
+                  </a>
+                  <a class="project-link">
+                    <figure class="project-preview">
+                      <img src="">
+                    </figure>
+                    <div class="project-description">
+                      <h4>Doggystyle</h4>
+                      <p>Node | Backbone.JS | Ruby</p>
+                    </div>
+                  </a>
+                  <a class="project-link">
+                    <figure class="project-preview">
+                      <img src="">
+                    </figure>
+                    <div class="project-description">
+                      <h4>Doggystyle</h4>
+                      <p>Node | Backbone.JS | Ruby</p>
+                    </div>
+                  </a>
+                </div>
+              </section>
+            </li>
+            <li>
+              <section class="content-body about-me">
+                <h1>About</h1>
+                <h3>Hi, I'm David...</h3>
+                <p>
+                  Here's some stuff about me
+                </p>
+              </section>
+            </li>
+            <li>
+              <section class="content-body contact">
+                <h1>Contact</h1>
+                <h3>Here's my Contact</h3>
+                <p>Email, Phone, Git</p>
+              </section>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <nav class="footer-nav">
+        <div class="footer-nav-wrap">
+          <ul class="footer-nav-list group">
+            <li>
+              <a class="footer-link linked-in">
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a class="footer-link github">
+                Github
+              </a>
+            </li>
+            <li>
+              <a class="footer-link tumblr">
+                Tumblr
+              </a>
+            </li>
+            <li>
+              <a class="footer-link email">
+                Email
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+
+    <section id="doggystyle" class="modal">
+      <section class="modal-content doggystyle">
+        <ul class="modal-content-list group">
+          <li class="group">
+            <div class="modal-page-description">
+              crap
+            </div>
+            <figure class="modal-page-photo">
+              <img src="">
+            </figure>
+          </li>
+          <li>
+            <div class="modal-page-description">
+              crap
+            </div>
+            <figure class="modal-page-photo">
+              <img src="">
+            </figure>
+          </li>
+        </ul>
+        <div class="hide-modal">&times</div>
+        <div class="navigate-modal previous">&lt</div>
+        <div class="navigate-modal next">&gt</div>
+      </section>
+    </section>
+
+    <section id="asteroids" class="modal">
+      <section class="modal-content">
+        <ul class="modal-content-list group">
+          <li class="group">
+            <div class="modal-page-description">
+              crap
+            </div>
+            <figure class="modal-page-photo">
+              <img src="">
+            </figure>
+          </li>
+          <li>crap2</li>
+        </ul>
+        <div class="hide-modal">&times</div>
+        <div class="navigate-modal previous">&lt</div>
+        <div class="navigate-modal next">&gt</div>
+      </section>
+    </section>
+
+
+    <script>
+      var changeView = function(to) {
+        $('.content-list').removeClass('link-home link-project link-about link-contact');
+        $('.content-list').addClass(to);
+      };
+
+      $( ".header-list a" ).on( "click", function(event) {
+				event.preventDefault();
+        var linkTo = event.currentTarget.dataset.link;
+        changeView(linkTo);
+      });
+
+      $('.project-link').on("mouseenter", function(event) {
+        event.preventDefault();
+        var vid = $(event.currentTarget).find('video');
+        vid[0].play();
+
+      });
+
+      $('.project-link').on("mouseleave", function(event) {
+        event.preventDefault();
+        var vid = $(event.currentTarget).find('video');
+        vid[0].pause();
+      });
+
+      $('.project-link').on("click", function(event) {
+        $('.modal').addClass('active');
+      });
+
+      $('.hide-modal').on("click", function(event) {
+        $('.modal').removeClass('active');
+      });
+    </script>
+
+
+  </body>
+</html>
