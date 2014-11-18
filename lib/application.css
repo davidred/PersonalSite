@@ -52,6 +52,7 @@ a:visited {
   z-index: 100;
   top: 0;
   width: 100%;
+  background: transparent;
 }
 
 .header-nav-wrap {
@@ -181,7 +182,7 @@ ul.content-list {
 }
 
 .project-description {
-  color: white;
+  color: #999;
   transition: color .8s;
 }
 
@@ -197,7 +198,7 @@ ul.content-list {
   margin: 10px 10px;
   cursor: pointer;
   height: 300px;
-  border: 1px solid white;
+  border: 1px solid #999;
   border-radius: 10px;
   transition: border 0.8s;
 }
@@ -205,13 +206,14 @@ ul.content-list {
 .project-link:hover {
   border: 1px solid rgb(119, 215, 244);
   /*border: 1px solid rgb(130, 190, 120);*/
-
+  border: 1px solid white;
 }
 
 .project-link:hover .project-description {
   color: #FFA528;
   color: rgb(119, 215, 244);
-  /*color: rgb(130, 190, 120);*/
+  color: rgb(45, 86, 155);
+  color: white;
 }
 
 .project-preview {
@@ -295,7 +297,8 @@ ul.content-list {
 }
 
 .footer-link > img:hover {
-  background: rgb(205,215,215);
+  /*background: rgb(205,215,215);*/
+  background: black;
   /*background: #FFF152;*/
 }
 
@@ -311,17 +314,17 @@ ul.content-list {
 }
 
 .modal-content {
-  position: absolute;
+  position: fixed;
   z-index: 1000;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  height: 90%;
-  width: 90%;
+  height: 620px;
+  width: 980px;
   border-radius: 3px;
   background: white;
   overflow: hidden;
-  padding: 0.5% 0.5%;
+  padding: 10px 10px;
   max-height: 605px;
 }
 
@@ -348,37 +351,35 @@ ul.content-list {
 .modal-content-container {
   background-image: url("assets/images/seamless_paper_texture.png");
   padding: 10px;
+  border-radius: 3px;
 }
 
 .modal-page-information {
+  float: left;
   background: white;
+  height: 160px;
   border-radius: 3px;
+  padding: 10px;
+  width: 620px;
 }
 
 .modal-page-title {
   display: inline-block;
   border-bottom: 10px solid #FFA528;
   font-size: 40px;
-  padding: 10px 0px;
-  margin-left: 10px;
   background: white;
   color: #697373;
 }
 
 .modal-page-description {
-  min-height: 50px;
-  padding: 20px 10px;
-  width: 1000px;
-  margin-left: 10px;
+  padding-top: 10px;
   background: white;
   /*text-align: center;*/
 }
 
 .modal-page-content-list {
-  width: 1120px;
   margin-bottom: 10px;
   /*height: 400px;*/
-
 }
 
 .modal-page-content-list > li {
@@ -386,17 +387,17 @@ ul.content-list {
   border-radius: 3px;
 }
 
-.modal-page-info.info-left {
+/*.modal-page-info.info-left {
   padding: 10px;
   width: 155px;
   height: 380px;
   margin-left: 10px;
   background: white;
-}
+}*/
 
 .modal-page-info.info-right {
   padding: 10px;
-  width: 265px;
+  width: 285px;
   height: 380px;
   margin-left: 10px;
   background: white;
@@ -421,6 +422,7 @@ ul.content-list {
 .modal-page-photo-container {
   height: 400px;
   width: 640px;
+  border-radius: 3px;
 }
 
 .modal-page-photo {
@@ -436,6 +438,25 @@ ul.content-list {
   margin: auto;
   width: 100%;
   height: 100%;
+}
+
+.modal-page-additional-info {
+  float: left;
+  width: 285px;
+  height: 160px;
+  background: white;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.modal-page-additional-info > h3 {
+  display: block;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.modal-page-technologies-list > li {
+  float: left;
 }
 
 /*.navigate-modal {
