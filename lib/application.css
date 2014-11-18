@@ -74,18 +74,30 @@ a:visited {
 }
 
 .header-list a {
-  border-bottom: 2px solid #FFA528;
   display: block;
   padding: 20px 0;
   margin: 0 10px;
+  border-bottom: 2px solid #FFA528;
+  border-bottom: 2px solid #ff8d00;
+  /*border-bottom: 2px solid rgb(130, 190, 120);
+  border-bottom: 2px solid #697373;
+  border-bottom: 2px solid #ccc;*/
 }
 
 .header-list a:hover {
   border-bottom: 5px solid #FFA528;
+  border-bottom: 5px solid #ff8d00;
+  /*border-bottom: 5px solid rgb(130, 190, 120);
+  border-bottom: 5px solid #697373;
+  border-bottom: 5px solid #ccc;*/
 }
 
 .header-list a.clicked {
   border-bottom: 5px solid #FFA528;
+  border-bottom: 5px solid #ff8d00;
+  /*border-bottom: 5px solid rgb(130, 190, 120);
+  border-bottom: 5px solid #697373;
+  border-bottom: 5px solid #ccc;*/
 }
 
 .content {
@@ -160,16 +172,22 @@ ul.content-list {
 }
 
 .projects-container {
-  background: white;
-  border-radius: 3px;
-  padding: 25px;
+  background: #393633;
+  padding: 30px;
   text-align: center;
   margin: 0 auto;
-  width: 760px;
+  width: 755px;
+  border-radius: 10px;
 }
 
-.project-description > h4{
+.project-description {
+  color: white;
+  transition: color .8s;
+}
+
+.project-description > h4 {
   font-size: 25px;
+
 }
 
 .project-link {
@@ -179,11 +197,21 @@ ul.content-list {
   margin: 10px 10px;
   cursor: pointer;
   height: 300px;
-  border: 1px solid #697373;
+  border: 1px solid white;
+  border-radius: 10px;
+  transition: border 0.8s;
 }
 
 .project-link:hover {
-  border: 2px solid #697373;
+  border: 1px solid rgb(119, 215, 244);
+  /*border: 1px solid rgb(130, 190, 120);*/
+
+}
+
+.project-link:hover .project-description {
+  color: #FFA528;
+  color: rgb(119, 215, 244);
+  /*color: rgb(130, 190, 120);*/
 }
 
 .project-preview {
@@ -191,6 +219,8 @@ ul.content-list {
   overflow: hidden;
   width: 350px;
   height: 220px;
+
+
 }
 
 
@@ -266,6 +296,7 @@ ul.content-list {
 
 .footer-link > img:hover {
   background: rgb(205,215,215);
+  /*background: #FFF152;*/
 }
 
 .modal {
