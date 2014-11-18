@@ -33,13 +33,14 @@
                     <img src='assets/images/david-rozenberg.jpg'>
                   </figure>
                   <h2>Software Developer</h2>
+                  <a href="mailto:daveroze@gmail.com">daveroze@gmail.com</a>
+                  <h3>646.441.7367</h3>
                 </div>
-
               </section>
             </li>
+
             <li>
               <section id="projects" class="content-body portfolio">
-                <h1>Projects</h1>
                 <div class="projects-container group">
                   <a class="project-link" data-project="doggystyle">
                     <video class="project-preview" preload loop>
@@ -80,6 +81,7 @@
                 </div>
               </section>
             </li>
+
             <li>
               <section class="content-body about-me">
                 <h1>About</h1>
@@ -105,26 +107,26 @@
       <nav class="footer-nav">
         <div class="footer-nav-wrap">
           <ul class="footer-nav-list group">
-            <li>
+            <li class="textured-link">
               <a class="footer-link linked-in">
-                LinkedIn
+                <img src="assets/images/linkedinpurple.png">
               </a>
             </li>
-            <li>
+            <li class="textured-link">
               <a class="footer-link github">
-                Github
+                <img src="assets/images/githubred.png">
               </a>
             </li>
-            <li>
+            <li class="textured-link">
               <a class="footer-link tumblr">
-                Tumblr
+                <img src="assets/images/tumblrgreen.png">
               </a>
             </li>
-            <li>
+            <!-- <li class="textured-link">
               <a class="footer-link email">
-                Email
+                <img src="assets/images/tumblrgreen.png">
               </a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </nav>
@@ -132,67 +134,91 @@
 
     <section id="doggystyle" class="modal">
       <section class="modal-content doggystyle">
-        <ul class="modal-content-list group">
-          <li id="page1" class="group">
-            <div class="modal-page-description">
-              <h4>Description</h4>
-              <p>technologies used</p>
-            </div>
-            <div class="modal-page-photo-container">
+        <div class="modal-content-container">
+          <ul class="modal-page-content-list group">
+            <li class="modal-page-photo-container">
               <figure class="modal-page-photo">
                 <img src="assets/images/doggystyle.png">
               </figure>
+            </li>
+            <li class="modal-page-info info-left">
+              <h3>Technologies</h3>
+              <p>Ruby on Rails</p>
+              <p>Backbone.js</p>
+              <p>jQuery</p>
+              <p>JBuilder</p>
+              <p>HTML/CSS</p>
+              <h3>Libraries</h3>
+              <p>Omniauth</p>
+              <p>Paperclip</p>
+              <p>BCrypt</p>
+              <p>Figaro</p>
+              <p>AWS</p>
+              <p>Faker</p>
+            </li>
+            <li class="modal-page-info info-right">
+              <h3>Noteworthy Features</h3>
+              <p>Preference-based searching of other users with Active Record scoping techniques</p>
+              <p>User inbox and conversations created by client-side associations and override of Model#parse method</p>
+              <p>Facebook authentication option integrated by using OAuth library</p>
+              <p>In-view profile editing using backbone subviews</p>
+            </li>
+          </ul>
+          <div class="modal-page-information">
+            <div class="modal-page-title">
+              <h4 class="title">DOGGYDATING</h4>
             </div>
-          </li>
-          <li id="page2" class="group">
             <div class="modal-page-description">
-              crap
+              <p>A joyful app which pet owners can use to find nearby playmates for their pets, as well as meet fellow pet lovers. It is built as a dating site where pets have the profile using a Ruby on Rails backend API and Backbone.js frontend</p>
             </div>
-            <div class="modal-page-photo-container">
-              <figure class="modal-page-photo">
-                <img src="">
-              </figure>
-            </div>
-          </li>
-          <li id="page3" class="group">
-            <div class="modal-page-description">
-              crap
-            </div>
-            <div class="modal-page-photo-container">
-              <figure class="modal-page-photo">
-                <img src="">
-              </figure>
-            </div>
-          </li>
-        </ul>
+          </div>
+        </div>
         <div class="hide-modal">&times</div>
-        <div class="navigate-modal previous" data-previous="">&lt</div>
-        <div class="navigate-modal next" data-next="">&gt</div>
+        <!-- <div class="navigate-modal previous" data-previous="">&lt</div>
+        <div class="navigate-modal next" data-next="">&gt</div> -->
       </section>
     </section>
 
     <section id="asteroids" class="modal">
-      <section class="modal-content">
-        <ul class="modal-content-list group">
-          <li class="group">
-            <div class="modal-page-description">
-              crap
-            </div>
-            <div class="modal-page-photo-container">
+      <section class="modal-content doggystyle">
+        <div class="modal-content-container">
+          <ul class="modal-page-content-list group">
+            <li class="modal-page-photo-container">
               <figure class="modal-page-photo">
-                <img src="">
+                <img src="assets/images/asteroids.png">
               </figure>
+            </li>
+            <li class="modal-page-info info-left">
+              <h3>Technologies</h3>
+              <p>Javascript</p>
+              <p>jQuery</p>
+              <p>HTML Canvas</p>
+              <p>HTML/CSS</p>
+
+              <h3>Libraries</h3>
+              <p>Keymaster</p>
+            </li>
+            <li class="modal-page-info info-right">
+              <h3>Noteworthy Features</h3>
+              <p>HTML Canvas rotation and translation to implement ship movement</p>
+              <p>Normal-vector calculation for bullet and explosion trajectories</p>
+              <p>Wrap function to carry over objects from left to right side of screen</p>
+              <p>Object Oriented Javascript file framework for method abstraction</p>
+              <p>Custom Javascript class inheritance method and implementation of dupped arrays</p>
+            </li>
+          </ul>
+          <div class="modal-page-information">
+            <div class="modal-page-title">
+              <h4 class="title">DEATH STAR vs PLANETS</h4>
             </div>
-          </li>
-          <li>crap2</li>
-        </ul>
+            <div class="modal-page-description">
+              <p>Classic Atari game 'Asteroids' rebuilt for the browser.</p>
+            </div>
+          </div>
+        </div>
         <div class="hide-modal">&times</div>
-        <div class="navigate-modal previous"
-             data-totalPages=""
-             data-navigatePage="">&lt</div>
-        <div class="navigate-modal next"
-             data-totalPages=""
-             data-navigatePage="">&gt</div>
+        <!-- <div class="navigate-modal previous" data-previous="">&lt</div>
+        <div class="navigate-modal next" data-next="">&gt</div> -->
       </section>
     </section>
 
@@ -203,8 +229,10 @@
         $('.content-list').addClass(to);
       };
 
-      $( ".header-list a" ).on( "click", function(event) {
+      $(".header-list a" ).on( "click", function(event) {
 				event.preventDefault();
+        $(event.currentTarget).parent().parent().find('a').removeClass('clicked')
+        $(event.currentTarget).addClass('clicked');
         var linkTo = event.currentTarget.dataset.link;
         changeView(linkTo);
       });
@@ -237,7 +265,7 @@
       });
 
       $('.next').on("click", function(event) {
-        debugger
+
       });
     </script>
 

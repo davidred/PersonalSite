@@ -1,8 +1,9 @@
-body, html, nav, ul, li, main, section, footer, h1, h2, h3, h4, p, a, div, figure, img {
+body, html, nav, ul, li, main, section, footer, h1, h2, h3, h4, h5, h6, p, a, div, figure, img {
   padding: 0;
   margin: 0;
   border: 0;
   font: inherit;
+  color: inherit;
   background: inherit;
   -webkit-appearance: none;
 }
@@ -10,10 +11,13 @@ body, html, nav, ul, li, main, section, footer, h1, h2, h3, h4, p, a, div, figur
 body, html {
   height: 100%;
   position: relative;
+  background-image: url("assets/images/fabric_of_squares_gray.png");
+  color: #697373;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 main {
@@ -26,6 +30,12 @@ ul {
 
 a {
   link-style: none;
+  -webkit-appearance: none;
+  text-decoration: none;
+}
+
+a:visited {
+  color:
   text-decoration: none;
 }
 
@@ -37,6 +47,7 @@ a {
 
 .header-nav {
   font-family: 'Signika', sans-serif;
+  font-weight: bold;
   position: fixed;
   z-index: 100;
   top: 0;
@@ -63,14 +74,18 @@ a {
 }
 
 .header-list a {
-  border-bottom: 2px solid rgb(232, 232, 232);
+  border-bottom: 2px solid #FFA528;
   display: block;
   padding: 20px 0;
   margin: 0 10px;
 }
 
 .header-list a:hover {
-  border-bottom: 5px solid rgb(232, 232, 232);
+  border-bottom: 5px solid #FFA528;
+}
+
+.header-list a.clicked {
+  border-bottom: 5px solid #FFA528;
 }
 
 .content {
@@ -110,20 +125,30 @@ ul.content-list {
 .home-summary {
   margin: 0 auto;
   text-align: center;
+  color: #697373;
 }
 
 .home-summary > h1 {
   font-size: 40px;
+  font-weight: bold
 }
 
 .home-summary > h2 {
-  font-size: 30px;
+  font-size: 20px;
+}
+
+.home-summary > a {
+  text-decoration: underline;
+}
+
+.home-summary > a:hover {
+  font-weight:bold;
 }
 
 
 .homepage-picture {
   margin: 30px auto;
-  height: 300px;
+  height: 270px;
   width: 200px;
   border-radius: 10px;
   overflow: hidden;
@@ -131,40 +156,43 @@ ul.content-list {
 
 .homepage-picture > img {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
 .projects-container {
-  /*border: 1px solid blue;*/
+  background: white;
+  border-radius: 3px;
+  padding: 25px;
   text-align: center;
   margin: 0 auto;
-  width: 825px;
+  width: 760px;
+}
 
+.project-description > h4{
+  font-size: 25px;
 }
 
 .project-link {
   box-sizing: border-box;
   display: block;
   float: left;
-  margin: 5px 5px;
+  margin: 10px 10px;
   cursor: pointer;
   height: 300px;
-  border: 5px solid black;
+  border: 1px solid #697373;
 }
 
 .project-link:hover {
-  /*background: rgba(0,0,0,0.3);*/
-  border: 5px solid blue;
+  border: 2px solid #697373;
 }
 
 .project-preview {
-  /*float: left;*/
-  background: black;
+  /*background: black;*/
   overflow: hidden;
   width: 350px;
   height: 220px;
-  /*margin: 10px 10px;*/
 }
+
 
 .project-preview > img {
   width: 100%;
@@ -172,7 +200,7 @@ ul.content-list {
 }
 
 .project-preview > src {
-  width: auto;
+  width: 100%;
   height: 100%;
 }
 
@@ -205,22 +233,38 @@ ul.content-list {
 }
 
 .footer-nav-list {
-  width: 50%;
+  width: 300px;
   height: 100%;
   margin: 0 auto;
 }
 
 .footer-nav-list li {
-  width: 25%;
+  width: 33%;
   height: 100%;
   float: left;
   text-align: center;
+  /*background: red;*/
+  padding-bottom: 20px;
 }
+
+
 
 .footer-link {
   display: block;
-  height: 100%;
-  padding: 20px 0;
+  background-image: url('assets/images/1.jpg');
+  cursor: pointer;
+  border-radius: 10px;
+  backround-repeat: no-repeat;
+  background-size: 20%;
+}
+
+.footer-link > img {
+  border-radius: 10px;
+  transition: background .6s;
+}
+
+.footer-link > img:hover {
+  background: rgb(205,215,215);
 }
 
 .modal {
@@ -245,6 +289,8 @@ ul.content-list {
   border-radius: 3px;
   background: white;
   overflow: hidden;
+  padding: 0.5% 0.5%;
+  max-height: 605px;
 }
 
 .hide-modal {
@@ -253,7 +299,7 @@ ul.content-list {
   top: 5px;
   right: 25px;
   font-size: 40px;
-  font-weight: bold;
+  font-weight: bold;  3
   color: #ccc;
   cursor: pointer;
   background-color: transparent;
@@ -263,7 +309,104 @@ ul.content-list {
   color: black;
 }
 
-.navigate-modal {
+.active {
+  display: block;
+}
+
+.modal-content-container {
+  background-image: url("assets/images/seamless_paper_texture.png");
+  padding: 10px;
+}
+
+.modal-page-information {
+  background: white;
+  border-radius: 3px;
+}
+
+.modal-page-title {
+  display: inline-block;
+  border-bottom: 10px solid #FFA528;
+  font-size: 40px;
+  padding: 10px 0px;
+  margin-left: 10px;
+  background: white;
+  color: #697373;
+}
+
+.modal-page-description {
+  min-height: 50px;
+  padding: 20px 10px;
+  width: 1000px;
+  margin-left: 10px;
+  background: white;
+  /*text-align: center;*/
+}
+
+.modal-page-content-list {
+  width: 1120px;
+  margin-bottom: 10px;
+  height: 400px;
+
+}
+
+.modal-page-content-list > li {
+  float: left;
+  border-radius: 3px;
+}
+
+.modal-page-info.info-left {
+  padding: 10px;
+  width: 155px;
+  height: 380px;
+  margin-left: 10px;
+  background: white;
+}
+
+.modal-page-info.info-right {
+  padding: 10px;
+  width: 265px;
+  height: 380px;
+  margin-left: 10px;
+  background: white;
+}
+
+.modal-page-info > h3 {
+  display: block;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+
+.modal-page-info > p {
+  display: block;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.modal-page-info > p:before {
+  content: "-";
+}
+
+.modal-page-photo-container {
+  height: 400px;
+  width: 640px;
+}
+
+.modal-page-photo {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.modal-page-photo > img {
+  display: block;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+/*.navigate-modal {
   display: block;
   background: #ccc;
   padding: 0 15px;
@@ -276,9 +419,9 @@ ul.content-list {
   font-family: 'Sigmar One';
   cursor: pointer;
   color: #fff;
-}
+}*/
 
-.navigate-modal:hover {
+/*.navigate-modal:hover {
   background: black;
 }
 
@@ -288,52 +431,9 @@ ul.content-list {
 
 .previous {
   left: 10px;
-}
+}*/
 
-.active {
-  display: block;
-}
-
-.modal-content-list {
-  height: 100%;
-  width: 400%;
-
-}
-
-.modal-content-list > li {
-  box-sizing: border-box;
-  float: left;
-  width: 25%;
-  height: 100%;
-  padding: 0.5% 0.5%;
-}
-
-.modal-page-description {
-  float: left;
-  height: 100%;
-  width: 25%;
-}
-
-.modal-page-photo-container {
-  float: left;
-  height: 100%;
-  width: 75%;
-}
-
-.modal-page-photo {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.modal-page-photo > img {
-  display: block;
-  margin: auto;
-  width: 100%;
-  height: auto;
-}
-
-.page-1-of-3 {
+/*.page-1-of-3 {
   transform: translateX(0);
 }
 
@@ -343,4 +443,4 @@ ul.content-list {
 
 .page-3-of-3 {
   transform: translateX(66.67%);
-}
+}*/
