@@ -9,7 +9,6 @@ body, html, nav, ul, li, main, section, footer, h1, h2, h3, h4, h5, h6, p, a, di
 }
 
 body, html {
-  /*height: 100%;*/
   position: relative;
   background-image: url("assets/images/fabric_of_squares_gray.png");
   color: #697373;
@@ -21,7 +20,7 @@ body {
 }
 
 main {
-/*  height: 100%;*/
+
 }
 
 ul {
@@ -221,10 +220,7 @@ ul.content-list {
   overflow: hidden;
   width: 350px;
   height: 220px;
-
-
 }
-
 
 .project-preview > img {
   width: 100%;
@@ -298,7 +294,7 @@ ul.content-list {
 
 .footer-link > img:hover {
   /*background: rgb(205,215,215);*/
-  background: black;
+  background: #d8817d;
   /*background: #FFF152;*/
 }
 
@@ -319,12 +315,13 @@ ul.content-list {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  height: 620px;
-  width: 980px;
+  height: 90%;
+  width: 90%;
   border-radius: 3px;
   background: white;
   overflow: hidden;
   padding: 10px 10px;
+  max-width: 980px;
   max-height: 605px;
 }
 
@@ -357,7 +354,7 @@ ul.content-list {
 .modal-page-information {
   float: left;
   background: white;
-  height: 160px;
+  height: 150px;
   border-radius: 3px;
   padding: 10px;
   width: 620px;
@@ -387,14 +384,6 @@ ul.content-list {
   border-radius: 3px;
 }
 
-/*.modal-page-info.info-left {
-  padding: 10px;
-  width: 155px;
-  height: 380px;
-  margin-left: 10px;
-  background: white;
-}*/
-
 .modal-page-info.info-right {
   padding: 10px;
   width: 285px;
@@ -411,12 +400,12 @@ ul.content-list {
 
 .modal-page-info > p {
   display: block;
-  margin-left: 10px;
+  margin-left: 15px;
   margin-bottom: 5px;
 }
 
 .modal-page-info > p:before {
-  content: "-";
+  content: "- ";
 }
 
 .modal-page-photo-container {
@@ -431,6 +420,7 @@ ul.content-list {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  border-radius: 3px;
 }
 
 .modal-page-photo > img {
@@ -443,10 +433,11 @@ ul.content-list {
 .modal-page-additional-info {
   float: left;
   width: 285px;
-  height: 160px;
+  height: 150px;
   background: white;
   padding: 10px;
   margin-left: 10px;
+  border-radius: 3px;
 }
 
 .modal-page-additional-info > h3 {
@@ -455,8 +446,29 @@ ul.content-list {
   margin-bottom: 5px;
 }
 
+.modal-page-additional-info > p {
+  display: block;
+  margin-left: 15px;
+}
+
+.modal-page-additional-info > p:before {
+  content: "- "
+}
+
 .modal-page-technologies-list > li {
   float: left;
+}
+
+iframe {
+  width: 850px;
+  height: 1100px;
+  overflow: hidden;
+  -webkit-appearance: none;
+  border-radius: 3px;
+}
+
+.resume-container {
+  width: 900px;
 }
 
 /*.navigate-modal {

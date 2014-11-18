@@ -15,8 +15,8 @@
         <ul class="header-list group">
           <li><a data-link="link-home" href="#home">HOME</a></li>
           <li><a data-link="link-project" href="#project">PORTFOLIO</a></li>
-          <li><a data-link="link-about" href="#about">ABOUT</a></li>
-          <li><a data-link="link-contact" href="#contact">CONTACT</a></li>
+          <li><a data-link="link-about" href="#about">PAST WORK</a></li>
+          <li><a data-link="link-contact" href="#contact">RESUME</a></li>
         </ul>
       </div>
     </nav>
@@ -55,11 +55,6 @@
                           <img src="assets/images/tumblrgreen.png">
                         </a>
                       </li>
-                      <!-- <li class="textured-link">
-                        <a class="footer-link email">
-                          <img src="assets/images/tumblrgreen.png">
-                        </a>
-                      </li> -->
                     </ul>
                   </div>
                 </nav>
@@ -74,7 +69,7 @@
                     </video>
                     <div class="project-description">
                       <h4>Doggystyle</h4>
-                      <p>Node | Backbone.JS | Ruby</p>
+                      <p>Ruby on Rails | Backbone.js</p>
                     </div>
                   </a>
                   <a class="project-link" data-project="asteroids">
@@ -83,25 +78,25 @@
                     </video>
                     <div class="project-description">
                       <h4>Asteroids</h4>
-                      <p>Node | Backbone.JS | Ruby</p>
+                      <p>Javascript | HTML5 Canvas</p>
                     </div>
                   </a>
-                  <a class="project-link" data-project="rails-lite">
+                  <a class="project-link" data-project="railslite">
                     <video class="project-preview" preload loop>
-                      <source src="assets/videos/doggystyle2.mov">
+                      <source src="assets/videos/railslite.mov">
                     </video>
                     <div class="project-description">
                       <h4>Rails Lite</h4>
-                      <p>Node | Backbone.JS | Ruby</p>
+                      <p>Ruby | WEBrick</p>
                     </div>
                   </a>
-                  <a class="project-link" data-project="hello-trello">
+                  <a class="project-link" data-project="hellotrello">
                     <video class="project-preview" preload loop>
-                      <source src="assets/videos/doggystyle2.mov">
+                      <source src="assets/videos/trello.mov">
                     </video>
                     <div class="project-description">
                       <h4>Hello Trello</h4>
-                      <p>Node | Backbone.JS | Ruby</p>
+                      <p>Ruby on Rails | Backbone.js</p>
                     </div>
                   </a>
                 </div>
@@ -124,31 +119,101 @@
                           <img src="assets/images/tumblrgreen.png">
                         </a>
                       </li>
-                      <!-- <li class="textured-link">
-                        <a class="footer-link email">
-                          <img src="assets/images/tumblrgreen.png">
-                        </a>
-                      </li> -->
                     </ul>
                   </div>
                 </nav>
             </li>
 
             <li>
-              <section class="content-body about-me">
-                <h1>About</h1>
-                <h3>Hi, I'm David...</h3>
-                <p>
-                  Here's some stuff about me
-                </p>
+              <section id="projects" class="content-body past-projects">
+                <div class="projects-container group">
+                  <a class="project-link" data-project="roboteam">
+                    <figure class="project-preview">
+                      <img src="assets/images/roboteam.jpg">
+                    </figure>
+                    <div class="project-description">
+                      <h4>Roboteam</h4>
+                      <p>Mechanical Engineer | Tel Aviv, Israel</p>
+                    </div>
+                  </a>
+                  <a class="project-link" data-project="commanderschallenge">
+                    <figure class="project-preview">
+                      <img src="assets/images/commanderschallenge.png">
+                    </figure>
+                    <div class="project-description">
+                      <h4>AFRL Commander's Challenge</h4>
+                      <p>Lead Engineer | Eglin Air Force Base</p>
+                    </div>
+                  </a>
+                  <a class="project-link" data-project="tacpod">
+                    <figure class="project-preview">
+                      <img src="assets/images/tacpod.png">
+                    </figure>
+                    <div class="project-description">
+                      <h4>TACPod</h4>
+                      <p>Systems Engineer | Hanscom Air Force Base</p>
+                    </div>
+                  </a>
+                  <a class="project-link" data-project="">
+                    <figure class="project-preview" preload loop>
+                      <img src="assets/images/ceif.jpg">
+                    </figure>
+                    <div class="project-description">
+                      <h4>CEIF</h4>
+                      <p>Systems Engineer | Hanscom Air Force Base</p>
+                    </div>
+                  </a>
+                </div>
               </section>
+                <nav class="footer-nav">
+                  <div class="footer-nav-wrap">
+                    <ul class="footer-nav-list group">
+                      <li class="textured-link">
+                        <a class="footer-link linked-in">
+                          <img src="assets/images/linkedinpurple.png">
+                        </a>
+                      </li>
+                      <li class="textured-link">
+                        <a class="footer-link github">
+                          <img src="assets/images/githubred.png">
+                        </a>
+                      </li>
+                      <li class="textured-link">
+                        <a class="footer-link tumblr">
+                          <img src="assets/images/tumblrgreen.png">
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </nav>
             </li>
             <li>
-              <section class="content-body contact">
-                <h1>Contact</h1>
-                <h3>Here's my Contact</h3>
-                <p>Email, Phone, Git</p>
+              <section class="content-body resume">
+                <div class="projects-container resume-container">
+                  <iframe src="https://docs.google.com/document/d/1qswmMrJStGGFaVwg-lVB5JHSzO8v-Jsbvw3Yb6bMdzM/pub?embedded=true"></iframe>
+                </div>
               </section>
+              <nav class="footer-nav">
+                <div class="footer-nav-wrap">
+                  <ul class="footer-nav-list group">
+                    <li class="textured-link">
+                      <a class="footer-link linked-in">
+                        <img src="assets/images/linkedinpurple.png">
+                      </a>
+                    </li>
+                    <li class="textured-link">
+                      <a class="footer-link github">
+                        <img src="assets/images/githubred.png">
+                      </a>
+                    </li>
+                    <li class="textured-link">
+                      <a class="footer-link tumblr">
+                        <img src="assets/images/tumblrgreen.png">
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
             </li>
           </ul>
 
@@ -156,8 +221,6 @@
 
       </section>
     </main>
-
-
 
     <section id="doggystyle" class="modal">
       <section class="modal-content doggystyle">
@@ -199,22 +262,12 @@
 
     <section id="asteroids" class="modal">
       <section class="modal-content doggystyle">
-        <div class="modal-content-container">
+        <div class="modal-content-container group">
           <ul class="modal-page-content-list group">
             <li class="modal-page-photo-container">
               <figure class="modal-page-photo">
                 <img src="assets/images/asteroids.png">
               </figure>
-            </li>
-            <li class="modal-page-info info-left">
-              <h3>Technologies</h3>
-              <p>Javascript</p>
-              <p>jQuery</p>
-              <p>HTML Canvas</p>
-              <p>HTML/CSS</p>
-
-              <h3>Libraries</h3>
-              <p>Keymaster</p>
             </li>
             <li class="modal-page-info info-right">
               <h3>Noteworthy Features</h3>
@@ -233,10 +286,86 @@
               <p>Classic Atari game 'Asteroids' rebuilt for the browser.</p>
             </div>
           </div>
+          <div class="modal-page-additional-info">
+            <h3>Technologies/Libraries</h3>
+              <p>Keymaster</p>
+              <p>HTML Canvas</p>
+              <p>jQuery</p>
+          </div>
         </div>
         <div class="hide-modal">&times</div>
-        <!-- <div class="navigate-modal previous" data-previous="">&lt</div>
-        <div class="navigate-modal next" data-next="">&gt</div> -->
+      </section>
+    </section>
+
+    <section id="railslite" class="modal">
+      <section class="modal-content railslite">
+        <div class="modal-content-container group">
+          <ul class="modal-page-content-list group">
+            <li class="modal-page-photo-container">
+              <figure class="modal-page-photo">
+                <img src="assets/images/railslite.png">
+              </figure>
+            </li>
+            <li class="modal-page-info info-right">
+              <h3>Noteworthy Features</h3>
+              <p>HTML Canvas rotation and translation to implement ship movement</p>
+              <p>Normal-vector calculation for bullet and explosion trajectories</p>
+              <p>Wrap function to carry over objects from left to right side of screen</p>
+              <p>Object Oriented Javascript file framework for method abstraction</p>
+              <p>Custom Javascript class inheritance method and implementation of dupped arrays</p>
+            </li>
+          </ul>
+          <div class="modal-page-information">
+            <div class="modal-page-title">
+              <h4 class="title">HELLO TRELLO</h4>
+            </div>
+            <div class="modal-page-description">
+              <p>Project management app inspired by Trello built in Ruby on Rails and Backbone.js</p>
+            </div>
+          </div>
+          <div class="modal-page-additional-info">
+            <h3>Technologies/Libraries</h3>
+              <p>WEBrick</p>
+              <p>jQueryUI</p>
+          </div>
+        </div>
+        <div class="hide-modal">&times</div>
+      </section>
+    </section>
+
+    <section id="hellotrello" class="modal">
+      <section class="modal-content hellotrello">
+        <div class="modal-content-container group">
+          <ul class="modal-page-content-list group">
+            <li class="modal-page-photo-container">
+              <figure class="modal-page-photo">
+                <img src="assets/images/hellotrello.png">
+              </figure>
+            </li>
+            <li class="modal-page-info info-right">
+              <h3>Noteworthy Features</h3>
+              <p>HTML Canvas rotation and translation to implement ship movement</p>
+              <p>Normal-vector calculation for bullet and explosion trajectories</p>
+              <p>Wrap function to carry over objects from left to right side of screen</p>
+              <p>Object Oriented Javascript file framework for method abstraction</p>
+              <p>Custom Javascript class inheritance method and implementation of dupped arrays</p>
+            </li>
+          </ul>
+          <div class="modal-page-information">
+            <div class="modal-page-title">
+              <h4 class="title">HELLO TRELLO</h4>
+            </div>
+            <div class="modal-page-description">
+              <p>Project management app inspired by Trello built in Ruby on Rails and Backbone.js</p>
+            </div>
+          </div>
+          <div class="modal-page-additional-info">
+            <h3>Technologies/Libraries</h3>
+              <p>WEBrick</p>
+              <p>jQueryUI</p>
+          </div>
+        </div>
+        <div class="hide-modal">&times</div>
       </section>
     </section>
 
