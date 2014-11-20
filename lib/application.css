@@ -1,4 +1,4 @@
-body, html, nav, ul, li, main, section, footer, h1, h2, h3, h4, h5, h6, p, a, div, figure, img {
+body, html, nav, ul, li, main, section, footer, h1, h2, h3, h4, h5, h6, p, a, div, figure, img, iframe {
   padding: 0;
   margin: 0;
   border: 0;
@@ -6,6 +6,10 @@ body, html, nav, ul, li, main, section, footer, h1, h2, h3, h4, h5, h6, p, a, di
   color: inherit;
   background: inherit;
   -webkit-appearance: none;
+}
+
+iframe {
+
 }
 
 body, html {
@@ -202,6 +206,10 @@ ul.content-list {
   transition: border 0.8s;
 }
 
+.past-projects a.project-link {
+  cursor: default;
+}
+
 .project-link:hover {
   border: 1px solid rgb(119, 215, 244);
   /*border: 1px solid rgb(130, 190, 120);*/
@@ -277,26 +285,30 @@ ul.content-list {
 }
 
 
-
-.footer-link {
-  display: block;
-  background-image: url('assets/images/1.jpg');
-  cursor: pointer;
-  border-radius: 10px;
-  backround-repeat: no-repeat;
-  background-size: 20%;
-}
-
 .footer-link > img {
   border-radius: 10px;
   transition: background .6s;
+  background: #dedede;
 }
 
 .footer-link > img:hover {
-  /*background: rgb(205,215,215);*/
-  background: #d8817d;
-  /*background: #FFF152;*/
+  background: white;
+  background: #FFFACD;
+  background: #2E4F9B;
+  background: white;
 }
+/*
+.footer-link.linkedin > img:hover {
+  background: #C1DF30;
+}
+
+.footer-link.tumblr > img:hover {
+  background: white;
+}
+
+.footer-link.github > img:hover {
+  background: #84bd78;
+}*/
 
 .modal {
   display: none;
@@ -366,6 +378,33 @@ ul.content-list {
   font-size: 40px;
   background: white;
   color: #697373;
+}
+
+.live-link {
+  display: inline-block;
+  border-radius: 50%;
+  background: #697373;
+  box-sizing: border-box;
+  height: 30px;
+  width: 30px;
+  overflow: hidden;
+  margin-left: 10px;
+}
+
+.opaque-link {
+  display: none;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+}
+
+.live-link > img {
+  /*border-radius: 50%;*/
+  transform: translateY(5px);
+  display: block;
+  width: 20px;
+  height:20px;
+  margin: auto;
 }
 
 .modal-page-description {
@@ -460,8 +499,8 @@ ul.content-list {
 }
 
 iframe {
-  width: 850px;
-  height: 1100px;
+  width: 810px;
+  height: 900px;
   overflow: hidden;
   -webkit-appearance: none;
   border-radius: 3px;
